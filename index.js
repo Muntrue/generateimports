@@ -109,6 +109,5 @@ function checkParams(input) {
 module.exports = {
     scss: scss,
     vue: vue,
-    js: js,
-    test: test
+    js: js
 };
