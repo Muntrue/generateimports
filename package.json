@@ -1,9 +1,13 @@
 {
   "name": "@muntrue/generateimports",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Module to generate import files",
   "main": "index.js",
   "author": "Mario Smit",
   "license": "MIT",
-  "repository": "muntrue/generateimports"
+  "repository": "muntrue/generateimports",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "glob": "^7.1.3"
+  }
 }
