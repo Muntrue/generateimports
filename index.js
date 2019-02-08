@@ -66,7 +66,7 @@ function getFileList(folder, extension, input) {
 
     glob.sync(folder).forEach(function (directory) {
         glob.sync(directory + "/**/*." + extension).forEach(function (file) {
-            list.push(path.relative(input.output, file).substr(3));
+            list.push(forwardSlash(path.relative(input.output, file).substr(3)));
         });
     });
 
@@ -85,6 +85,15 @@ function toCamelCase(str) {
     }).join("");
 }
 
+/**
+ * Converts backwards slash into forward slash
+ *
+ * @param str
+ * @returns {*}
+ */
+function forwardSlash(str){
+    return str.replace("\\","/");
+}
 /**
  * Checks for correct params
  *
