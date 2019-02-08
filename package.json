@@ -1,6 +1,6 @@
 {
   "name": "@muntrue/generateimports",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Module to generate import files",
   "main": "index.js",
   "author": "Mario Smit",

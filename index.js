@@ -92,7 +92,7 @@ function toCamelCase(str) {
  * @returns {*}
  */
 function forwardSlash(str){
-    return str.replace("\\","/");
+    return str.replace(/\\/g,"/");
 }
 /**
  * Checks for correct params
