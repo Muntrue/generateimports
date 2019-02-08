@@ -32,7 +32,7 @@ function vue(input) {
     input.folders.forEach(folder => imports = imports.concat(getFileList(folder, "vue", input)));
 
     const formatter = file => "import " + toCamelCase(path.parse(file).name) + " from '" + file + "';\n" +
-    "Vue.component('" + path.parse(file).name + "', " + toCamelCase(path.parse(file).name) + ");"
+    "Vue.component('" + path.parse(file).name + "', " + toCamelCase(path.parse(file).name) + ");\n";
     fs.writeFileSync(input.output, imports.map(formatter).join("\r\n"));
 }
 
