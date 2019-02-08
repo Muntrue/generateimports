@@ -47,7 +47,7 @@ function js(input) {
     let imports = [];
 
     if (input.hasOwnProperty("files")) imports = imports.concat(input.files);
-    input.folders.forEach(folder => imports = imports.concat(getFileList(folder, "vue", input)));
+    input.folders.forEach(folder => imports = imports.concat(getFileList(folder, "js", input)));
 
     const formatter = file => "import " + toCamelCase(path.parse(file).name) + " from '" + file + "';" + "\n" + "global." + toCamelCase(path.parse(file).name) + " = " + toCamelCase(path.parse(file).name) + ";\n";
     fs.writeFileSync(input.output, imports.map(formatter).join("\r\n"));
