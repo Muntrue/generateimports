@@ -1,8 +1,9 @@
 {
   "name": "@muntrue/generateimports",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Module to generate import files",
-  "main": "index.js",
+  "exports": "./index.js",
+  "type": "module",
   "author": "Mario Smit",
   "license": "MIT",
   "repository": {
@@ -11,6 +12,6 @@
   },
   "keywords": ["vuejs","javascript","scss","import"],
   "dependencies": {
-    "glob": "^7.1.3"
+    "glob": "^10.3.0"
   }
 }
